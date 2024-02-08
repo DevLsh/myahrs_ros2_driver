@@ -2,9 +2,9 @@
 
 [![Licence](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-|  ROS2      | foxy   | galactic
-|:-------:|:-------:|:-------:|
-| Branch  | [`foxy-devel`](https://github.com/clobot-git/myahrs_ros2_driver/tree/foxy-devel) | TBD
+|  ROS2      | foxy   | galactic | humble
+|:-------:|:-------:|:-------:|:-------:|
+| Branch  | [`foxy-devel`](https://github.com/clobot-git/myahrs_ros2_driver/tree/foxy-devel) | TBD | [`humble-devel`](https://github.com/DevLsh/myahrs_ros2_driver/tree/humble-devel) |
 | CI  | Linux: [![Build Status](https://travis-ci.com/clobot-git/myahrs_ros2_driver.svg?branch=foxy-devel)](https://travis-ci.com/github/clobot-git/myahrs_ros2_driver/builds)| TBD |
 
 ## Overview
