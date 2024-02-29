@@ -29,7 +29,7 @@ def generate_launch_description():
 
     rviz_config_file = LaunchConfiguration('rviz_config_file')
     use_rviz = LaunchConfiguration('use_rviz')
-    port = LaunchConfiguration('port')
+    port = LaunchConfiguration('port', default='/dev/ttyACM0')
 
     declare_rviz_config_file_cmd = DeclareLaunchArgument(
         'rviz_config_file',
@@ -65,5 +65,6 @@ def generate_launch_description():
         ),
         declare_rviz_config_file_cmd,
         declare_use_rviz_cmd,
+        declare_port,
         rviz_cmd,
     ])
