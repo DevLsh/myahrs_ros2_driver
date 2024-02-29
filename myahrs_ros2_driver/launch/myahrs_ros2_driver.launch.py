@@ -29,6 +29,7 @@ def generate_launch_description():
 
     rviz_config_file = LaunchConfiguration('rviz_config_file')
     use_rviz = LaunchConfiguration('use_rviz')
+    port = LaunchConfiguration('port')
 
     declare_rviz_config_file_cmd = DeclareLaunchArgument(
         'rviz_config_file',
@@ -39,6 +40,11 @@ def generate_launch_description():
         'use_rviz',
         default_value='True',
         description='Whether to start RVIZ')
+    
+    declare_port = DeclareLaunchArgument(
+        'port',
+        default_value='/dev/ttyACM0',
+        description='')
 
     rviz_cmd = Node(
         condition=IfCondition(use_rviz),
@@ -54,7 +60,7 @@ def generate_launch_description():
             executable='myahrs_ros2_driver',
             name='myahrs_ros2_driver',
             output='screen',
-            arguments=['/dev/ttyACM0', '115200'],
+            arguments=[port, '115200'],
             parameters=[config_file]
         ),
         declare_rviz_config_file_cmd,
